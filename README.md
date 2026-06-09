@@ -1,29 +1,99 @@
-# Verilog Basic Gate Simulation
+# 🔌 Verilog Basic Logic Gates Simulation
 
-This project is for learning and testing basic logic gates using Verilog HDL.
+This project contains implementation and verification of basic logic gates using Verilog HDL.
 
-## 📌 Included Module
-- My_or (OR Gate)
+---
+
+## 📂 Included Modules
+
+- AND Gate
+- OR Gate
+- NOT Gate
+- NAND Gate
+- NOR Gate
+- XOR Gate
+- XNOR Gate
+
+---
 
 ## ⚙️ Description
-This design checks the behavior of a simple OR gate.
 
-## Truth Table
+Each module implements a basic digital logic gate and is tested using a simple testbench to verify correct functionality.
 
-A | B | Y
---|--|--
-0 | 0 | 0
-0 | 1 | 1
-1 | 0 | 1
-1 | 1 | 1
+---
 
-## 🧪 Test
-A simple testbench is used to verify all input combinations.
+## 🧪 Truth Tables
 
-## ▶️ Run (Icarus Verilog)
+### AND Gate
+A | B | Y  
+--|--|--  
+0 | 0 | 0  
+0 | 1 | 0  
+1 | 0 | 0  
+1 | 1 | 1  
 
-iverilog -o sim My_or.v testcase.sv  
+---
+
+### OR Gate
+A | B | Y  
+--|--|--  
+0 | 0 | 0  
+0 | 1 | 1  
+1 | 0 | 1  
+1 | 1 | 1  
+
+---
+
+### NOT Gate
+A | Y  
+--|--  
+0 | 1  
+1 | 0  
+
+---
+
+### NAND Gate
+A | B | Y  
+--|--|--  
+0 | 0 | 1  
+0 | 1 | 1  
+1 | 0 | 1  
+1 | 1 | 0  
+
+---
+
+### NOR Gate
+A | B | Y  
+--|--|--  
+0 | 0 | 1  
+0 | 1 | 0  
+1 | 0 | 0  
+1 | 1 | 0  
+
+---
+
+### XOR Gate
+A | B | Y  
+--|--|--  
+0 | 0 | 0  
+0 | 1 | 1  
+1 | 0 | 1  
+1 | 1 | 0  
+
+---
+
+### XNOR Gate
+A | B | Y  
+--|--|--  
+0 | 0 | 1  
+0 | 1 | 0  
+1 | 0 | 0  
+1 | 1 | 1  
+
+---
+
+## ▶️ How to Run (Icarus Verilog)
+
+```bash
+iverilog -o sim *.v *.sv
 vvp sim
-
-## 🎯 Purpose
-Just verifying that logic gates are working correctly in simulation.
